@@ -1,0 +1,23 @@
+﻿@viewModel DotVVMFormBootstrap.ViewModels.MasterPageViewModel, DotVVMFormBootstrap
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Person Form</title>
+    <dot:RequiredResource Name="bootstrap" />
+    <link href="https://docs-samples.dotvvm.com//bootstrap-2.0/content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://docs-samples.dotvvm.com//bootstrap-2.0/content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://docs-samples.dotvvm.com//bootstrap-2.0/content/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preload" href="https://docs-samples.dotvvm.com//bootstrap-2.0/dotvvmResource/3kMTMYlMEVGIBNaSjoQt/knockout" as="script" />
+    <link rel="preload" href="https://docs-samples.dotvvm.com//bootstrap-2.0/dotvvmResource/CbJTEPF3egaD3BaAdVU-/dotvvm--internal" as="script" />
+    <link href="https://docs-samples.dotvvm.com//bootstrap-2.0/dotvvmResource/MC6B7STLYr-abLXzco1w/dotvvm--bootstrap-css" rel="stylesheet" type="text/css" />
+    <link rel="preload" href="https://docs-samples.dotvvm.com//bootstrap-2.0/dotvvmResource/6dY0qMsWYg7cVp0-nIws/dotvvm--bootstrap" as="script" />
+</head>
+<body>
+ 	
+
+	<dot:ContentPlaceHolder ID="MainContent" />
+
+</body>
+</html>

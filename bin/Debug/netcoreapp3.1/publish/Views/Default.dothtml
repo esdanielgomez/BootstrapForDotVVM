@@ -1,0 +1,86 @@
+﻿@viewModel DotVVMFormBootstrap.ViewModels.DefaultViewModel, DotVVMFormBootstrap
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+
+	<bs:PageHeader>
+		<div align="center"><h3 align="center"><b>{{value: Title}}</b></h3></div>
+	</bs:PageHeader>
+
+	<div align="center">
+		<bs:Form>
+			<br />
+			<bs:Panel Type="Primary" style="width:70%;">
+				<HeaderTemplate>
+					<div>
+						<br />
+						<bs:Image ImageUrl="UserIcon.png" AlternateText="Persons" width="35%" height="35%" />
+					</div>
+				</HeaderTemplate>
+				<ContentTemplate>
+
+					<bs:FormGroup>
+						<div Validator.Value="{value: Person.Username}"
+							 Validator.InvalidCssClass="has-error"
+							 Validator.SetToolTipText="true"
+							 class="page-input-box">
+
+							<bs:TextBoxGroup LabelText="Username"
+											 Text="{value: Person.Username}"
+											 Type="Normal" />
+						</div>
+					</bs:FormGroup>
+
+					<bs:FormGroup>
+						<div Validator.Value="{value: Person.EnrollmentDate}"
+							 Validator.InvalidCssClass="has-error"
+							 Validator.SetToolTipText="true"
+							 class="page-input-box">
+							<bs:DateTimePickerGroup SelectedDate="{value: Person.EnrollmentDate}" LabelText="EnrollmentDate" Mode="Date" />
+						</div>
+					</bs:FormGroup>
+
+					<bs:FormGroup LabelText="Gender">
+						<div Validator.Value="{value: Person.Gender}"
+							 Validator.InvalidCssClass="has-error"
+							 Validator.SetToolTipText="true"
+							 class="page-input-box">
+
+							<bs:RadioButton Text="Male"
+											GroupName="RadioButtonsGenders"
+											CheckedValue="Male"
+											CheckedItem="{value: Person.Gender}"
+											Inline="true" />
+							<bs:RadioButton Text="Female"
+											GroupName="RadioButtonsGenders"
+											CheckedValue="Female"
+											CheckedItem="{value: Person.Gender}"
+											Inline="true" />
+							<bs:RadioButton Text="Other"
+											GroupName="RadioButtonsGenders"
+											CheckedValue="Other"
+											CheckedItem="{value: Person.Gender}" 
+											Inline="true" />
+
+						</div>
+					</bs:FormGroup>
+
+					<bs:FormGroup>
+						<div Validator.Value="{value: Person.About}"
+							 Validator.InvalidCssClass="has-error"
+							 Validator.SetToolTipText="true"
+							 class="page-input-box">
+							<bs:TextBoxGroup LabelText="About"
+											 Text="{value: Person.About}"
+											 Type="MultiLine" />
+						</div>
+					</bs:FormGroup>
+
+				</ContentTemplate>
+				<FooterTemplate>
+					<b>Bootstrap for DotVVM with ASP.NET Core demo</b>
+				</FooterTemplate>
+			</bs:Panel>
+		</bs:Form>
+	</div>
+
+</dot:Content>
